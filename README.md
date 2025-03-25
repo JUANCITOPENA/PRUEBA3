@@ -11,6 +11,8 @@ Este proyecto es una demostración de un ecommerce completamente funcional desar
 - **💳 Pasarela de Pago Simulada:** Incluye un formulario para introducir datos de pago y utiliza la biblioteca `jsPDF` para generar una factura en formato PDF.
 - **✨ Buenas Prácticas de Desarrollo:** Código limpio, semántico, responsivo, optimizado para SEO/SEM y accesible (A11y).
 
+## 🌐-Mira el proyecto aqui: https://juancitopena.github.io/ecommerce-demo/
+
 ## 💻 Tecnologías Utilizadas 🌐
 
 - **🌈 HTML5 & CSS3:** Estructuración y estilos semánticos y responsivos.
