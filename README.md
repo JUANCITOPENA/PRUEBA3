@@ -24,7 +24,7 @@ Este proyecto es una demostración de un ecommerce completamente funcional desar
 
 1. **📥 Clona el repositorio o descarga los archivos:**
    ```bash
-   git clone https://github.com/tu-usuario/ecommerce-demo.git
+   git clone https://github.com/JUANCITOPENA/PRUEBA3.git
    ```
 
 2. **🖥️ Abre la carpeta del proyecto en Visual Studio Code.**
