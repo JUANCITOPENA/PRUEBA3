@@ -1,0 +1,59 @@
+/* style.css */
+
+/* Reinicio de márgenes y paddings básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fuente principal */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Encabezado */
+  header {
+    background-color: #ffffff;
+  }
+  
+  .navbar-brand span {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  /* Tarjetas de producto */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  }
+  
+  /* Imagen de producto para mantener proporción */
+  .card-img-top {
+    object-fit: cover;
+    height: 200px;
+  }
+  
+  /* Botón de agregar */
+  .btn-add {
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-add:hover {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  /* Responsividad para tarjetas */
+  @media (max-width: 576px) {
+    .card-img-top {
+      height: 150px;
+    }
+  }
+  
