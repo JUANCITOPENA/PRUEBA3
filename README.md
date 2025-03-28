@@ -121,9 +121,7 @@ Aprender backend es como descubrir el motor de un coche 🚗: mientras el fronte
 
 ## 🏁 MI Recomendacion desde la Experiencia 🧐
 
-Si estás comenzando desde cero y buscas algo intuitivo y demandado, **Python** 🐍 es una excelente opción. Si ya tienes experiencia con frontend, **JavaScript (Node.js)** te ayudará a convertirte en un desarrollador full-stack 🌐. Por otro lado, si te apasiona el desarrollo de videojuegos o aplicaciones empresariales, **C#** 🎮 es un gran camino a seguir. Finalmente, evalúa tus objetivos y el mercado laboral tanto en República Dominicana como internacionalmente ya que en el caso de nostros tenemos las opciones de trabajar remoto🌎.
-
-
+Si estás comenzando desde cero y buscas algo intuitivo y demandado, **Python 🐍** es una excelente opción. Si ya tienes experiencia con frontend, **JavaScript (Node.js)** te ayudará a convertirte en un desarrollador full-stack 🌐. Por otro lado, si te apasiona el desarrollo de videojuegos o aplicaciones empresariales, **C# 🎮** es un gran camino a seguir. Ahora bien, es importante destacar a **PHP 🌐**, que, gracias a la gran cantidad de sitios web que dependen de él y de plataformas como WordPress, es uno de los lenguajes que más oportunidades laborales genera. 
 
 
 
