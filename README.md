@@ -1,132 +1,180 @@
-# Hola, Bryan Sánchez 🌟
+# Examen de Informática Aplicada 💻
 
-¡A lo largo de los años, he visto a muchos desarrolladores dar sus primeros pasos y crecer en este fascinante mundo del desarrollo web, aquí te dejo una guía personalizada para que encuentres el que mejor se adapte a ti. 
+## Preguntas de Verdadero/Falso
 
----
+1. **La informática aplicada se refiere al procesamiento automático de información mediante dispositivos electrónicos y sistemas computacionales.**
+   - Verdadero
+   - Falso
 
-## 🌟 Lo primero que debes considerar es: 
+2. **La computadora consta de varias partes esenciales como el hardware y el software.**
+   - Verdadero
+   - Falso
 
-Aprender backend es como descubrir el motor de un coche 🚗: mientras el frontend es lo que los usuarios ven y tocan, el backend es lo que hace que todo funcione tras bambalinas. Para elegir el lenguaje ideal, debemos considerar factores como tus intereses, las oportunidades laborales en tu país (República Dominicana 🇩🇴) y en el extranjero, tu nivel de experiencia, y hacia dónde te gustaría orientar tu carrera. A continuación, te presentaré los lenguajes más destacados, junto con escenarios de uso, empresas que los utilizan, salarios y otras recomendaciones.
+3. **Una base de datos es un conjunto organizado de datos que se utiliza para acceder, administrar y actualizar información fácilmente.**
+   - Verdadero
+   - Falso
 
----
+## Preguntas Adicionales
 
-## 🔥 Lenguajes Backend Populares
+4. **Excel fue desarrollado por Microsoft y originalmente lanzado en 1985 para Apple Macintosh como "Microsoft Excel."**
+   - Verdadero
+   - Falso
 
-### 1️- **Python 🐍**
-- **Escenarios y proyectos**: Perfecto para aplicaciones web, automatización, análisis de datos y desarrollo de inteligencia artificial (AI). Ejemplo: Crear un sistema de reservas en línea o una API que gestione recomendaciones de películas.
-- **Empresas que lo usan**: Google, Netflix, Instagram y Spotify.
-- **Frameworks populares**: 
-  - **Django**: Robusto, ideal para proyectos grandes.
-  - **Flask**: Ligero, excelente para proyectos más pequeños.
-- **Salarios en República Dominicana**:
-  - **Junior**: RD$30,000 - RD$50,000 mensuales 💼.
-  - **Senior**: RD$70,000 - RD$120,000 mensuales.
-- **Salarios internacionales**:
-  - **Junior**: $60,000 - $80,000 USD anuales 🌎.
-  - **Senior**: $100,000 - $150,000 USD anuales.
-- **Modos de trabajo**: Muy demandado en empresas tecnológicas y como freelancer para proyectos de automatización o AI.
-- **Ranking**: Siempre en el top 1,2 y 3 según TIOBE y Stack Overflow.
-- **Recomendación**: Ideal si buscas un lenguaje versátil, amigable para principiantes y con alta demanda laboral.
+5. **¿Cuál es el rango completo de filas en Excel en versiones recientes?**
+   - A) De 1 hasta 1,048,576
+   - B) De A hasta Z
+   - C) De A hasta XFD
+   - D) De 1 hasta 65,536
+   - F) Ninguna
 
----
+6. **¿Cuál es el rango completo de columnas en Excel?**
+   - A) De A hasta XFD
+   - B) De 1 hasta 1,048,576
+   - C) De A hasta Z
+   - D) De 1 hasta 65,536
+   - F) Ninguna
 
-### 2️ - **JavaScript (Node.js) 🌐**
-- **Escenarios y proyectos**: Ideal para aplicaciones en tiempo real como chats, videojuegos multijugador o paneles administrativos dinámicos. Ejemplo: Implementar un sistema de notificaciones en vivo para una tienda online.
-- **Empresas que lo usan**: LinkedIn, Uber, PayPal.
-- **Frameworks populares**:
-  - **Express.js**: Minimalista y rápido.
-  - **NestJS**: Estructurado y basado en TypeScript.
-- **Salarios en República Dominicana**:
-  - **Junior**: RD$25,000 - RD$45,000 mensuales 💼.
-  - **Senior**: RD$60,000 - RD$100,000 mensuales.
-- **Salarios internacionales**:
-  - **Junior**: $50,000 - $75,000 USD anuales 🌎.
-  - **Senior**: $90,000 - $130,000 USD anuales.
-- **Modos de trabajo**: Muy común en startups 🚀 y proyectos de tiempo parcial.
-- **Ranking**: Extremadamente valorado por permitir trabajar en frontend y backend.
-- **Recomendación**: Perfecto si ya tienes experiencia en frontend y deseas ser un desarrollador full-stack.
+7. **Estas son las funciones matemáticas más utilizadas:**
+   1. SUMA: Calcula la suma de un rango de celdas.
+   2. PROMEDIO: Calcula el promedio de un rango de celdas.
+   3. MAX: Encuentra el valor máximo en un rango de celdas.
+   4. MIN: Encuentra el valor mínimo en un rango de celdas.
+   - Verdadero
+   - Falso
 
----
+8. **¿En Excel, las filas están representadas por números (1, 2, 3, ..., 1,048,576)?**
+   - Verdadero
+   - Falso
 
-### 3-  **C# 🎮**
-- **Escenarios y proyectos**: Es la elección ideal para videojuegos (con Unity), sistemas empresariales y aplicaciones de escritorio. Ejemplo: Diseñar un videojuego o una aplicación para gestionar la nómina en una empresa.
-- **Empresas que lo usan**: Microsoft, Stack Overflow, Accenture.
-- **Frameworks populares**:
-  - **ASP.NET Core**: Potente para desarrollo web.
-  - **Entity Framework**: Para manejar bases de datos.
-- **Salarios en República Dominicana**:
-  - **Junior**: RD$35,000 - RD$55,000 mensuales 💼.
-  - **Senior**: RD$80,000 - RD$130,000 mensuales.
-- **Salarios internacionales**:
-  - **Junior**: $55,000 - $75,000 USD anuales 🌎.
-  - **Senior**: $90,000 - $140,000 USD anuales.
-- **Modos de trabajo**: Popular en grandes empresas, especialmente para aplicaciones empresariales y con tecnología Microsoft.
-- **Ranking**: Altamente valorado en el desarrollo de videojuegos y soluciones empresariales.
-- **Recomendación**: Ideal si te interesan los videojuegos o sistemas empresariales.
+9. **¿En el aula llegamos a realizar este ejercicio?**
+   - Verdadero
+   - Falso
 
----
+10. **¿En Excel, las columnas están representadas por letras (A, B, C, ..., XFD)?**
+    - Verdadero
+    - Falso
 
-### 4️- **Java ☕**
-- **Escenarios y proyectos**: Amplio uso en aplicaciones empresariales, sistemas bancarios y desarrollo móvil (Android). Ejemplo: Crear un sistema de facturación para una pyme o una app móvil.
-- **Empresas que lo usan**: Amazon, Airbnb, Twitter.
-- **Frameworks populares**:
-  - **Spring Boot**: Robustez para sistemas empresariales escalables.
-- **Salarios en República Dominicana**:
-  - **Junior**: RD$30,000 - RD$50,000 mensuales 💼.
-  - **Senior**: RD$70,000 - RD$120,000 mensuales.
-- **Salarios internacionales**:
-  - **Junior**: $60,000 - $85,000 USD anuales 🌎.
-  - **Senior**: $100,000 - $150,000 USD anuales.
-- **Modos de trabajo**: Muy requerido en grandes corporaciones para contratos a largo plazo.
-- **Ranking**: Siempre en el top 5 de los lenguajes más usados.
-- **Recomendación**: Excelente si buscas estabilidad laboral y trabajar en grandes empresas.
+11. **Indicar cuáles son estas partes de Excel:**
+    1. Barra superior
+    2. Cinta de opciones
+    3. Espacio de trabajo
 
+12. **A la ciencia que estudia el procesamiento automático de información mediante dispositivos electrónicos y sistemas computacionales, que abarca también los principales fundamentos de las ciencias de la computación, como la programación para el desarrollo de software, la arquitectura de las computadoras y del hardware, las redes como internet y la inteligencia artificial, se le llama:**
+    - A) Informática Aplicada
+    - B) Ingeniería en Sistemas y Computación
+    - C) Diseño Gráfico UI/UX
+    - D) Administración Psicológica
+    - F) Ninguna de las anteriores
 
----
+13. **Si en la celda A1 tienes el número 10, en la celda A2 el número 15, y en la celda A3 aplicas la fórmula `=A1+A2`, ¿cuál sería el resultado mostrado en A3?**
+    - A) 25
+    - B) 20
+    - C) 10
+    - D) Error en la fórmula
 
-### 5- **Ruby 💎**
-- **Escenarios y proyectos**: Ideal para startups y proyectos que requieren desarrollo rápido, como una plataforma de ecommerce para un negocio local.
-- **Empresas que lo usan**: Shopify, GitHub, Airbnb.
-- **Frameworks populares**:
-  - **Ruby on Rails**: Perfecto para desarrollar MVPs (productos mínimos viables).
-- **Salarios en República Dominicana**:
-  - **Junior**: RD$25,000 - RD$40,000 mensuales 💼.
-  - **Senior**: RD$60,000 - RD$100,000 mensuales.
-- **Salarios internacionales**:
-  - **Junior**: $50,000 - $70,000 USD anuales 🌎.
-  - **Senior**: $90,000 - $120,000 USD anuales.
-- **Modos de trabajo**: Muy común en startups y proyectos freelance.
-- **Ranking**: Aunque menos popular, sigue siendo relevante en nichos específicos.
-- **Recomendación**: Ideal para emprendedores o quienes quieran trabajar en startups.
+14. **¿Qué sucede si intentas dividir el valor de una celda por 0 en Excel, por ejemplo, `=A1/0`?**
+    - A) Excel muestra el resultado como "0".
+    - B) Excel muestra el resultado como "#¡DIV/0!".
+    - C) Excel redondea el resultado a 1.
+    - D) Excel no realiza la operación.
 
----
+15. **En el entorno de Excel, ¿qué herramienta utilizarías para aplicar filtros a tus datos y seleccionar solo los valores específicos que deseas visualizar?**
+    - A) Filtro automático
+    - B) Formato condicional
+    - C) Cinta de opciones
+    - D) Vista previa
 
-### 6- **PHP 🌐**
-- **Escenarios y proyectos**: Centrado en desarrollo web y CMS como WordPress. Ejemplo: Crear un sitio web para un negocio o una plataforma educativa.
-- **Empresas que lo usan**: Wikipedia y Facebook (en sus inicios).
-- **Frameworks populares**:
-  - **Laravel**: Moderno y eficiente.
-  - **Symfony**: Escalable y robusto.
-- **Salarios en República Dominicana**:
-  - **Junior**: RD$20,000 - RD$35,000 mensuales 💼.
-  - **Senior**: RD$50,000 - RD$80,000 mensuales.
-- **Salarios internacionales**:
-  - **Junior**: $40,000 - $60,000 USD anuales 🌎.
-  - **Senior**: $70,000 - $100,000 USD anuales.
-- **Modos de trabajo**: Muy común en proyectos freelance y pequeñas empresas.
-- **Ranking**: Mantiene relevancia en el desarrollo de sitios web pequeños y medianos.
-- **Recomendación**: Útil si quieres trabajar en el desarrollo web básico.
+16. **¿En el aula llegamos a utilizar este ejemplo? ¿Cuál era la función principal para resolver el tema de las equivalencias, aplicar formatos condicionales o cambiar colores automáticamente según los resultados en Excel? ¿Cómo se llama la función?**
+    - A) Sí, llegamos a resolverlo; la función utilizada era la Función SI (o IF en inglés).
+    - B) No, este ejercicio lo dejamos de tarea, pero no llegamos a realizarlo.
+    - C) No, nunca lo vimos.
+    - D) El profesor indicó ver un video sobre el tema.
+    - F) Ninguna de las anteriores.
 
----
+17. **¿En el aula llegamos a realizar este ejercicio?**
+    - Verdadero
+    - Falso
 
-## 🏁 MI Recomendacion desde la Experiencia 🧐
+18. **¿Qué es Microsoft Excel y para qué se utiliza comúnmente en el entorno empresarial?**
+    - A) Es una hoja de cálculo que se utiliza para realizar análisis de datos, cálculos y representación gráfica.
+    - B) Es un software de edición de imágenes.
+    - C) Es una aplicación de procesamiento de texto.
+    - D) Es un programa de diseño gráfico.
+    - F) Ninguna
 
-Si estás comenzando desde cero y buscas algo intuitivo y demandado, **Python 🐍** es una excelente opción. Si ya tienes experiencia con frontend, **JavaScript (Node.js)** te ayudará a convertirte en un desarrollador full-stack 🌐. Por otro lado, si te apasiona el desarrollo de videojuegos o aplicaciones empresariales, **C# 🎮** es un gran camino a seguir. Ahora bien, es importante destacar a **PHP 🌐**, que, gracias a la gran cantidad de sitios web que dependen de él y de plataformas como WordPress, es uno de los lenguajes que más oportunidades laborales genera. 
+19. **Si en las celdas C5, C6, C7 y C8 tienes los valores 100, 80, 90 y 54 respectivamente, y utilizas la fórmula `=SUM(C5:C8)`, ¿cuál sería el resultado?**
+    - A) 324
+    - B) -324
+    - C) Error en la fórmula
+    - D) No se pueden sumar valores negativos
+    - F) Ninguna
 
+20. **Si en la celda A1 tienes el valor 20 y en la celda A2 el valor 5, ¿cuál sería el resultado si usas la fórmula `=A1/A2`?**
+    - A) 4
+    - B) 5
+    - C) 25
+    - D) Error en la fórmula
 
+21. **¿Qué símbolo utilizas para empezar a escribir una fórmula en Excel?**
+    - A) =
+    - B) +
+    - C) -
+    - D) *
 
+22. **Si en la celda B1 tienes el número 10 y en B2 tienes el número 15, ¿cuál sería el resultado de la fórmula `=B1*B2`?**
+    - A) 150
+    - B) 25
+    - C) 5
+    - D) Error en la fórmula
 
+23. **Si tienes los valores 10, 20, 30 y 40 en las celdas A1, A2, A3 y A4 respectivamente, ¿qué resultado obtendrías al usar la fórmula `=AVERAGE(A1:A4)`?**
+    - A) 25
+    - B) 30
+    - C) 40
+    - D) 10
 
+24. **¿Qué operación realiza la fórmula `=A1^2` en Excel si el valor en A1 es 3?**
+    - A) Eleva el valor al cuadrado.
+    - B) Divide el valor entre 2.
+    - C) Duplica el valor.
+    - D) Muestra un error.
+
+25. **¿Cuál es la diferencia entre los operadores `>` y `<` en Excel?**
+    - A) `>` indica mayor que y `<` indica menor que.
+    - B) `<` indica mayor que y `>` indica menor que.
+    - C) Ambos significan igual a.
+    - D) Ninguno se utiliza en Excel.
+
+26. **¿Qué opción del menú de Excel usarías para guardar un documento por primera vez?**
+    - A) Archivo > Guardar como.
+    - B) Inicio > Guardar como.
+    - C) Archivo > Nuevo.
+    - D) Archivo > Exportar.
+
+27. **¿Qué pasos sigues para abrir un documento existente en Excel?**
+    - A) Archivo > Abrir > Seleccionar archivo.
+    - B) Inicio > Abrir > Seleccionar archivo.
+    - C) Archivo > Guardar > Seleccionar archivo.
+    - D) Archivo > Nuevo > Seleccionar archivo.
+
+28. **¿Qué hace la función `=SUM(A1:A10)`?**
+    - A) Suma los valores de las celdas A1 a A10.
+    - B) Resta los valores de las celdas A1 a A10.
+    - C) Divide los valores de las celdas A1 a A10.
+    - D) Encuentra el valor más alto en las celdas A1 a A10.
+
+29. **Si tienes los valores 50 en A1 y 30 en A2, ¿qué devuelve la fórmula `=IF(A1>A2, "Mayor", "Menor")`?**
+    - A) Mayor
+    - B) Menor
+    - C) Igual
+    - D) Error
+
+30. **¿Qué es Microsoft Excel y para qué se utiliza comúnmente en el entorno empresarial?**
+    - A) Es una hoja de cálculo que se utiliza para realizar análisis de datos, cálculos y representación gráfica, además de gestionar bases de datos y automatizar tareas.
+    - B) Es un software de edición de imágenes.
+    - C) Es una aplicación de procesamiento de texto.
+    - D) Es un programa de diseño gráfico.
+    - E) Ninguna de las anteriores.
 
 
 
