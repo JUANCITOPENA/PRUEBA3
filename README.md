@@ -661,3 +661,206 @@ code[class*="language-"] {
   /* Ajustes adicionales para pantallas muy pequeñas si son necesarios */
 }
 ```
+
+
+# Project Documentation
+
+## API Implementation (api/generate.js)
+
+```javascript
+// api/generate.js
+// Carga las variables de entorno del archivo .env (solo para desarrollo local)
+require('dotenv').config();
+
+const axios = require('axios');
+
+// Middleware simple para CORS (permitir peticiones desde el navegador)
+const allowCors = (fn) => async (req, res) => {
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Origin', '*'); // Permite cualquier origen (para desarrollo)
+  // O especifica tu origen local: res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
+
+  // Manejar petición OPTIONS (preflight)
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+  // Ejecutar la función principal
+  return await fn(req, res);
+};
+
+// La función principal que maneja la petición
+const handler = async (req, res) => {
+  // 1. Verificar que sea método POST
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', ['POST']);
+    return res.status(405).json({ error: 'Método no permitido' });
+  }
+
+  // 2. Obtener el prompt del cuerpo de la petición
+  const { prompt } = req.body;
+
+  if (!prompt) {
+    return res.status(400).json({ error: 'El campo "prompt" es requerido.' });
+  }
+
+  // 3. Obtener la API Key de las variables de entorno
+  const apiKey = process.env.GOOGLE_API_KEY;
+
+  if (!apiKey) {
+    console.error('Error: GOOGLE_API_KEY no está configurada.');
+    // No reveles detalles de la API Key al cliente
+    return res.status(500).json({ error: 'Error de configuración del servidor.' });
+  }
+
+  // 4. Definir la URL de la API de Google Gemini
+  // Usa un modelo reciente como 'gemini-1.5-flash-latest'
+  const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
+
+  try {
+    // 5. Realizar la llamada a la API de Google
+    const response = await axios.post(apiUrl, {
+      // El cuerpo esperado por la API de Gemini
+      contents: [{
+        parts: [{ text: prompt }]
+      }],
+      // Opcional: Configuración de generación (ej. para controlar la salida)
+      // generationConfig: {
+      //   temperature: 0.7,
+      //   maxOutputTokens: 2048,
+      // }
+    }, {
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+
+    // 6. Enviar la respuesta de Google de vuelta al frontend
+    return res.status(200).json(response.data);
+
+  } catch (error) {
+    // 7. Manejar errores de la llamada a la API
+    console.error('Error al llamar a la API de Google:', error.response ? error.response.data : error.message);
+
+    // Construir un mensaje de error útil para el frontend
+    const statusCode = error.response?.status || 500;
+    const errorMessage = error.response?.data?.error?.message || 'Error interno al procesar la consulta con la IA.';
+
+    return res.status(statusCode).json({ error: errorMessage });
+  }
+};
+
+// Exportar el handler envuelto en el middleware CORS
+module.exports = allowCors(handler);
+```
+
+## .gitignore Configuration
+
+```
+# Dependencias de Node.js
+node_modules
+
+# Archivo de variables de entorno local (¡MUY IMPORTANTE!)
+.env
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Archivos de configuración de Vercel local
+.vercel
+```
+
+## Environment Variables (.env)
+
+```
+# Pega tu clave API de Google aquí SIN comillas ni espacios extra
+GOOGLE_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+## Project Setup Instructions
+
+### Inicializar npm e Instalar Dependencias
+
+Abre tu terminal dentro de la carpeta mi-proyecto-ia y ejecuta los siguientes comandos:
+
+```bash
+# 1. Inicializa npm (crea package.json)
+# La opción -y acepta todas las configuraciones por defecto
+npm init -y
+
+# 2. Instala las dependencias necesarias (axios, cors, dotenv)
+npm install axios cors dotenv
+```
+
+### Ejecutar el Proyecto Localmente
+
+Ahora estás listo para probar la aplicación en tu computadora.
+
+1. **Iniciar el Servidor de Desarrollo Vercel**
+
+   En tu terminal (aún dentro de la carpeta mi-proyecto-ia), ejecuta:
+
+   ```bash
+   vercel dev
+   ```
+
+2. **Responder a las Preguntas de Configuración (Solo la Primera Vez)**
+
+   Si es la primera vez que ejecutas vercel dev en esta carpeta, Vercel CLI necesita asociarla con tu cuenta y un proyecto (incluso para desarrollo local). Te hará algunas preguntas:
+
+   - `? Set up and deploy "[ruta/a/tu/carpeta]"?` -> Responde Y (o presiona Enter).
+   - `? Which scope should contain your project?` -> Selecciona tu scope personal (tu nombre de usuario) y presiona Enter.
+   - `? Link to existing project?` -> Responde N (o presiona Enter), ya que es nuevo para Vercel.
+   - `? What's your project's name?` -> Escribe un nombre válido, todo en minúsculas (ej. mi-proyecto-ia) y presiona Enter.
+   - `? In which directory is your code located?` -> Responde . (o presiona Enter).
+   - (Si aparece) `? Want to modify these settings?` -> Responde N (o presiona Enter).
+
+   Después de responder, Vercel guardará esta configuración en una carpeta oculta .vercel y no volverá a preguntar en futuras ejecuciones de vercel dev en esta carpeta.
+
+3. **Acceder a la Aplicación**
+
+   Una vez que vercel dev termine de iniciarse, verás un mensaje como:
+
+   ```
+   > Ready! Available at http://localhost:3000
+   ```
+
+   (El puerto podría ser 3001 o similar si el 3000 está ocupado).
+
+   Abre tu navegador web y ve a la dirección indicada (ej. http://localhost:3000).
+
+4. **Probar la Aplicación**
+
+   - Deberías ver la interfaz web "Interactúa con Gemini".
+   - Escribe una consulta en el área de texto.
+   - Haz clic en "Enviar".
+   - Verás el indicador "Cargando..." y, si todo es correcto, la respuesta de Gemini aparecerá en la caja de resultados.
+
+5. **Detener el Servidor Local**
+
+   Cuando termines de probar, vuelve al terminal donde se ejecuta vercel dev y presiona Ctrl + C. Confirma si te lo pide (S o Y).
+
+## Despliegue en Vercel (Opcional)
+
+Si deseas desplegar tu aplicación en la web:
+
+1. Ejecuta el comando de despliegue:
+   ```bash
+   vercel deploy --prod
+   ```
+
+2. Configura la API Key en Vercel:
+   - Ve al dashboard de tu proyecto en Vercel -> Settings -> Environment Variables
+   - Añade una variable llamada GOOGLE_API_KEY con tu clave API como valor
+   - Asegúrate de que esté disponible para Production, Preview y Development
+
+3. Despliega: Desde tu terminal en la carpeta del proyecto, ejecuta el comando de despliegue nuevamente si es necesario.
