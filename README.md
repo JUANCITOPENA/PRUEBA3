@@ -1,129 +1,134 @@
-# Simple Gemini AI Web App
+# 🚀 Simple Gemini AI Web App (Guía de Configuración Local)
 
-Esta es una aplicación web básica que permite a los usuarios enviar consultas a la API de Google Gemini y ver las respuestas. Utiliza un frontend simple (HTML, CSS, JS) y un backend serverless (Node.js) diseñado para ejecutarse localmente con `vercel dev` o desplegarse fácilmente en Vercel.
+Esta es una aplicación web básica que permite a los usuarios enviar consultas a la **API de Google Gemini** y ver las respuestas. Utiliza un frontend simple (HTML, CSS, JS) y un backend serverless (Node.js) que se ejecuta localmente simulando el entorno de Vercel con `vercel dev`.
 
-![Ejemplo de la Interfaz](https://via.placeholder.com/600x400.png?text=Imagen+de+la+App+Aquí)
-*(Reemplaza la URL de la imagen de arriba con una captura de pantalla real de tu aplicación si lo deseas)*
+## 📋 Prerrequisitos
 
-## Características
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-*   Interfaz de usuario sencilla para ingresar consultas (prompts).
-*   Comunicación con la API de Google Gemini (modelo `gemini-1.5-flash-latest`).
-*   Visualización de la respuesta de la IA, con soporte básico para formato Markdown (incluyendo bloques de código).
-*   Indicador de carga durante la llamada a la API.
-*   Backend serverless en Node.js listo para Vercel.
-*   Configuración local simplificada usando `vercel dev` y variables de entorno `.env`.
+1. **Node.js y npm:** Necesarios para ejecutar JavaScript en el backend, gestionar paquetes y usar Vercel CLI. Verifica tu instalación abriendo tu terminal y ejecutando:
+   ```bash
+   node -v
+   npm -v
+   ```
+   Si no los tienes, descárgalos desde [nodejs.org](https://nodejs.org/) (se recomienda la versión LTS).
 
-## Tecnologías Utilizadas
+2. **Vercel CLI:** La herramienta de línea de comandos de Vercel. Instálala globalmente e inicia sesión:
+   ```bash
+   npm install -g vercel
+   vercel login
+   ```
+   Sigue las instrucciones para autenticarte (generalmente a través del navegador).
 
-*   **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
-*   **Backend (Serverless Function):** Node.js
-*   **API:** Google Generative Language API (Gemini)
-*   **Librerías Frontend (CDN):**
-    *   [Marked.js](https://marked.js.org/): Para renderizar Markdown.
-    *   [Prism.js](https://prismjs.com/): Para resaltar sintaxis en bloques de código.
-*   **Librerías Backend (npm):**
-    *   `axios`: Para realizar peticiones HTTP a la API de Gemini.
-    *   `cors`: Para manejar Cross-Origin Resource Sharing en la función serverless.
-    *   `dotenv`: Para cargar variables de entorno desde un archivo `.env` en desarrollo local.
-*   **Entorno de Desarrollo/Despliegue:** [Vercel CLI](https://vercel.com/docs/cli) (`vercel dev` para local, `vercel deploy` para producción).
+3. **Google Gemini API Key:** Necesitas una clave API para usar Gemini. Puedes obtenerla desde [Google AI Studio](https://aistudio.google.com/) o la consola de Google Cloud. Asegúrate de que la API esté habilitada para tu proyecto.
 
-## Estructura del Proyecto
+4. **Un Editor de Código:** Como [Visual Studio Code](https://code.visualstudio.com/), Sublime Text, etc.
 
+5. **Git (Opcional pero recomendado):** Si planeas usar GitHub.
 
+## 🛠️ Herramientas Esenciales a Instalar
+
+Instala estas herramientas iniciales y esenciales en tu computadora **ANTES** de empezar a crear los archivos del proyecto:
+
+### 💻 PASO 1: Instalar Visual Studio Code (VS Code)
+
+**¿Qué es?** Es el programa donde escribirás y editarás todo el código (HTML, CSS, JavaScript).
+
+**¿Dónde conseguirlo?** Ve al sitio web oficial: https://code.visualstudio.com/
+
+**Pasos de Instalación:**
+
+1. Abre el enlace en tu navegador.
+2. La página detectará automáticamente tu sistema operativo. Haz clic en el botón grande de descarga.
+3. Se descargará un archivo instalador.
+4. Ejecuta ese archivo.
+5. En el asistente de instalación:
+   - Acepta el acuerdo de licencia.
+   - Elige la carpeta de instalación (la ubicación por defecto suele estar bien).
+   - En "Tareas Adicionales", asegúrate de marcar "Agregar al PATH" (**importante**).
+   - Haz clic en "Instalar".
+6. ¡Listo! Ahora puedes buscar "Visual Studio Code" en tu menú de inicio y abrirlo.
+
+### ⚙️ PASO 2: Instalar Node.js y npm
+
+**¿Qué es?** Node.js es el entorno que permite ejecutar JavaScript fuera del navegador. npm (Node Package Manager) viene incluido y se usa para instalar librerías.
+
+**¿Dónde conseguirlo?** Ve al sitio web oficial: https://nodejs.org/
+
+**Pasos de Instalación:**
+
+1. Abre el enlace en tu navegador.
+2. Elige la versión **LTS** (Long Term Support).
+3. Ejecuta el archivo descargado.
+4. En el asistente de instalación:
+   - Acepta los términos de licencia.
+   - Elige la carpeta de instalación.
+   - Asegúrate de que la opción "Add to PATH" esté seleccionada (**crucial**).
+   - Haz clic en "Instalar".
+5. **Verificación Importante:**
+   - Cierra TODOS los terminales abiertos.
+   - Abre un NUEVO terminal.
+   - Escribe `node -v` y presiona Enter.
+   - Escribe `npm -v` y presiona Enter.
+   - Si ves números de versión, ¡todo está correcto!
+
+### 🔄 PASO 3: Instalar Vercel CLI
+
+**¿Qué es?** Es la herramienta de línea de comandos de Vercel para ejecutar y desplegar tu proyecto.
+
+**Pasos de Instalación:**
+
+1. Abre un terminal.
+2. Escribe el siguiente comando y presiona Enter:
+   ```bash
+   npm install -g vercel
+   ```
+3. Verifica la instalación:
+   ```bash
+   vercel --version
+   ```
+4. Iniciar Sesión:
+   ```bash
+   vercel login
+   ```
+5. Sigue las instrucciones para autorizar la conexión.
+
+## 📁 Pasos de Configuración
+
+Sigue estos pasos para configurar y ejecutar el proyecto en tu máquina local.
+
+### 1. Crear la Carpeta del Proyecto
+
+Crea una carpeta en tu computadora donde vivirá el proyecto. Abre tu terminal y usa:
+
+```bash
+# Elige una ubicación (ej. Escritorio)
+cd ~/Desktop
+# Crea la carpeta del proyecto
+mkdir mi-proyecto-ia
+# Entra en la carpeta
+cd mi-proyecto-ia
+```
+
+### 2. Estructura de Archivos
+
+Tu proyecto tendrá esta estructura:
+
+```
 mi-proyecto-ia/
 ├── api/
-│ └── generate.js # Función Serverless Node.js que llama a Gemini
-├── .env # Archivo para guardar la API Key (¡NO SUBIR A GIT!)
-├── .gitignore # Especifica archivos a ignorar por Git
-├── index.html # Estructura HTML del frontend
-├── package.json # Define dependencias y scripts de Node.js
-├── README.md # Este archivo
-└── style.css # Estilos CSS para el frontend
-└── node_modules/ # Carpeta creada por npm install (ignorada por Git)
+│   └── generate.js      <-- Archivo de la función serverless
+├── .env                 <-- Archivo para la API Key (local)
+├── .gitignore           <-- Archivo para ignorar archivos en Git/Vercel
+├── index.html           <-- El frontend de la aplicación
+├── style.css            <-- Estilos CSS para el frontend
+└── package.json         <-- Se creará con npm init
+```
 
+Para crear esta estructura, dentro de la carpeta del proyecto ejecuta:
 
-## Prerrequisitos
-
-Antes de comenzar, asegúrate de tener instalado:
-
-*   [Node.js](https://nodejs.org/) (versión LTS recomendada) y npm (viene con Node.js).
-*   [Vercel CLI](https://vercel.com/docs/cli) (`npm install -g vercel`).
-*   Una [Google Gemini API Key](https://aistudio.google.com/).
-*   Git (opcional, pero recomendado para control de versiones).
-
-## Configuración Local
-
-Sigue estos pasos para ejecutar el proyecto en tu máquina:
-
-1.  **Clonar el Repositorio (si está en GitHub):**
-    ```bash
-    git clone <URL-del-repositorio>
-    cd <nombre-del-repositorio>
-    ```
-    **O si empiezas desde cero, crea la estructura y archivos** como se describe en la sección "Estructura del Proyecto".
-
-2.  **Crear el archivo `.env`:**
-    En la raíz del proyecto, crea un archivo llamado `.env` y añade tu clave API de Google:
-    ```env
-    # .env
-    GOOGLE_API_KEY=TU_CLAVE_API_DE_GOOGLE_AQUI
-    ```
-    **Importante:** Reemplaza `TU_CLAVE_API_DE_GOOGLE_AQUI` con tu clave real. Asegúrate de que `.env` esté listado en tu archivo `.gitignore`.
-
-3.  **Instalar Dependencias:**
-    Abre tu terminal en la raíz del proyecto y ejecuta:
-    ```bash
-    npm install
-    ```
-    Esto instalará `axios`, `cors` y `dotenv` listados en `package.json` (si no existe `package.json`, ejecúta `npm init -y` antes).
-
-4.  **Iniciar el Servidor de Desarrollo:**
-    Ejecuta el comando de Vercel para desarrollo local:
-    ```bash
-    vercel dev
-    ```
-    *   **Nota:** La primera vez que ejecutes `vercel dev` en esta carpeta, te hará preguntas para vincular el proyecto a tu cuenta de Vercel. Responde afirmativamente para configurar (`Y`), elige tu scope, indica que no es un proyecto existente (`N`), dale un nombre en minúsculas (ej. `mi-proyecto-ia`), confirma el directorio (`.`) y acepta la configuración detectada (`N`). Esto solo ocurre una vez por carpeta.
-
-5.  **Abrir la Aplicación:**
-    `vercel dev` te dará una URL local (normalmente `http://localhost:3000`). Abre esa dirección en tu navegador web.
-
-6.  **Probar:**
-    Escribe una consulta en el área de texto y haz clic en "Enviar". Deberías ver la respuesta de la IA.
-
-7.  **Detener el Servidor:**
-    Vuelve al terminal y presiona `Ctrl + C`.
-
-## Despliegue en Vercel
-
-1.  **Configurar Variables de Entorno en Vercel:**
-    *   Ve al dashboard de tu proyecto en [vercel.com](https://vercel.com/).
-    *   Navega a Settings -> Environment Variables.
-    *   Añade una variable llamada `GOOGLE_API_KEY`.
-    *   Pega tu clave API de Google como valor.
-    *   Asegúrate de que esté disponible para los entornos de Production, Preview y Development.
-
-2.  **Desplegar:**
-    Desde tu terminal en la raíz del proyecto, ejecuta:
-    ```bash
-    # Despliega a una URL de preview
-    vercel
-
-    # Despliega directamente a producción
-    vercel --prod
-    ```
-    Vercel construirá y desplegará tu aplicación, proporcionando una URL pública.
-
-## Solución de Problemas Comunes
-
-*   **Error 404 al enviar consulta localmente:** Verifica que la estructura `api/generate.js` sea correcta (nombres en minúsculas) y reinicia `vercel dev`.
-*   **Errores 500, 400, 403:** Revisa la salida del terminal donde corre `vercel dev`. Usualmente indica problemas con la `GOOGLE_API_KEY` en `.env` o errores devueltos por la API de Gemini. Asegúrate de que la clave sea correcta y esté habilitada en Google Cloud/AI Studio.
-*   **La aplicación no carga en `localhost:3000`:** Asegúrate de que `vercel dev` se esté ejecutando activamente en el terminal.
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, abre un *issue* para discutir cambios mayores o un *pull request* para mejoras menores o correcciones de errores.
-
-## Licencia
-
-[MIT](LICENSE) *(O la licencia que prefieras. Si no tienes un archivo LICENSE, puedes omitir esta sección o elegir una licencia como MIT)*.
+```bash
+# Dentro de mi-proyecto-ia
+mkdir api
+touch index.html style.css .env .gitignore api/generate.js
+```
