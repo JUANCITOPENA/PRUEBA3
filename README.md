@@ -1,226 +1,129 @@
-# Examen de Informática Aplicada 💻
+# Simple Gemini AI Web App
 
-## Preguntas de Verdadero/Falso
+Esta es una aplicación web básica que permite a los usuarios enviar consultas a la API de Google Gemini y ver las respuestas. Utiliza un frontend simple (HTML, CSS, JS) y un backend serverless (Node.js) diseñado para ejecutarse localmente con `vercel dev` o desplegarse fácilmente en Vercel.
 
-1. **La informática aplicada se refiere al procesamiento automático de información mediante dispositivos electrónicos y sistemas computacionales.**
-   - Verdadero
-   - Falso
+![Ejemplo de la Interfaz](https://via.placeholder.com/600x400.png?text=Imagen+de+la+App+Aquí)
+*(Reemplaza la URL de la imagen de arriba con una captura de pantalla real de tu aplicación si lo deseas)*
 
-2. **La computadora consta de varias partes esenciales como el hardware y el software.**
-   - Verdadero
-   - Falso
+## Características
 
-3. **Una base de datos es un conjunto organizado de datos que se utiliza para acceder, administrar y actualizar información fácilmente.**
-   - Verdadero
-   - Falso
+*   Interfaz de usuario sencilla para ingresar consultas (prompts).
+*   Comunicación con la API de Google Gemini (modelo `gemini-1.5-flash-latest`).
+*   Visualización de la respuesta de la IA, con soporte básico para formato Markdown (incluyendo bloques de código).
+*   Indicador de carga durante la llamada a la API.
+*   Backend serverless en Node.js listo para Vercel.
+*   Configuración local simplificada usando `vercel dev` y variables de entorno `.env`.
 
-## Preguntas Adicionales
+## Tecnologías Utilizadas
 
-4. **Excel fue desarrollado por Microsoft y originalmente lanzado en 1985 para Apple Macintosh como "Microsoft Excel."**
-   - Verdadero
-   - Falso
+*   **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
+*   **Backend (Serverless Function):** Node.js
+*   **API:** Google Generative Language API (Gemini)
+*   **Librerías Frontend (CDN):**
+    *   [Marked.js](https://marked.js.org/): Para renderizar Markdown.
+    *   [Prism.js](https://prismjs.com/): Para resaltar sintaxis en bloques de código.
+*   **Librerías Backend (npm):**
+    *   `axios`: Para realizar peticiones HTTP a la API de Gemini.
+    *   `cors`: Para manejar Cross-Origin Resource Sharing en la función serverless.
+    *   `dotenv`: Para cargar variables de entorno desde un archivo `.env` en desarrollo local.
+*   **Entorno de Desarrollo/Despliegue:** [Vercel CLI](https://vercel.com/docs/cli) (`vercel dev` para local, `vercel deploy` para producción).
 
-5. **¿Cuál es el rango completo de filas en Excel en versiones recientes?**
-   - A) De 1 hasta 1,048,576
-   - B) De A hasta Z
-   - C) De A hasta XFD
-   - D) De 1 hasta 65,536
-   - F) Ninguna
-
-6. **¿Cuál es el rango completo de columnas en Excel?**
-   - A) De A hasta XFD
-   - B) De 1 hasta 1,048,576
-   - C) De A hasta Z
-   - D) De 1 hasta 65,536
-   - F) Ninguna
-
-7. **Estas son las funciones matemáticas más utilizadas:**
-   1. SUMA: Calcula la suma de un rango de celdas.
-   2. PROMEDIO: Calcula el promedio de un rango de celdas.
-   3. MAX: Encuentra el valor máximo en un rango de celdas.
-   4. MIN: Encuentra el valor mínimo en un rango de celdas.
-   - Verdadero
-   - Falso
-
-8. **¿En Excel, las filas están representadas por números (1, 2, 3, ..., 1,048,576)?**
-   - Verdadero
-   - Falso
-
-9. **¿En el aula llegamos a realizar este ejercicio?**
-   - Verdadero
-   - Falso
-
-10. **¿En Excel, las columnas están representadas por letras (A, B, C, ..., XFD)?**
-    - Verdadero
-    - Falso
-
-11. **Indicar cuáles son estas partes de Excel:**
-    1. Barra superior
-    2. Cinta de opciones
-    3. Espacio de trabajo
-
-12. **A la ciencia que estudia el procesamiento automático de información mediante dispositivos electrónicos y sistemas computacionales, que abarca también los principales fundamentos de las ciencias de la computación, como la programación para el desarrollo de software, la arquitectura de las computadoras y del hardware, las redes como internet y la inteligencia artificial, se le llama:**
-    - A) Informática Aplicada
-    - B) Ingeniería en Sistemas y Computación
-    - C) Diseño Gráfico UI/UX
-    - D) Administración Psicológica
-    - F) Ninguna de las anteriores
-
-13. **Si en la celda A1 tienes el número 10, en la celda A2 el número 15, y en la celda A3 aplicas la fórmula `=A1+A2`, ¿cuál sería el resultado mostrado en A3?**
-    - A) 25
-    - B) 20
-    - C) 10
-    - D) Error en la fórmula
-
-14. **¿Qué sucede si intentas dividir el valor de una celda por 0 en Excel, por ejemplo, `=A1/0`?**
-    - A) Excel muestra el resultado como "0".
-    - B) Excel muestra el resultado como "#¡DIV/0!".
-    - C) Excel redondea el resultado a 1.
-    - D) Excel no realiza la operación.
-
-15. **En el entorno de Excel, ¿qué herramienta utilizarías para aplicar filtros a tus datos y seleccionar solo los valores específicos que deseas visualizar?**
-    - A) Filtro automático
-    - B) Formato condicional
-    - C) Cinta de opciones
-    - D) Vista previa
-
-16. **¿En el aula llegamos a utilizar este ejemplo? ¿Cuál era la función principal para resolver el tema de las equivalencias, aplicar formatos condicionales o cambiar colores automáticamente según los resultados en Excel? ¿Cómo se llama la función?**
-    - A) Sí, llegamos a resolverlo; la función utilizada era la Función SI (o IF en inglés).
-    - B) No, este ejercicio lo dejamos de tarea, pero no llegamos a realizarlo.
-    - C) No, nunca lo vimos.
-    - D) El profesor indicó ver un video sobre el tema.
-    - F) Ninguna de las anteriores.
-
-17. **¿En el aula llegamos a realizar este ejercicio?**
-    - Verdadero
-    - Falso
-
-18. **¿Qué es Microsoft Excel y para qué se utiliza comúnmente en el entorno empresarial?**
-    - A) Es una hoja de cálculo que se utiliza para realizar análisis de datos, cálculos y representación gráfica.
-    - B) Es un software de edición de imágenes.
-    - C) Es una aplicación de procesamiento de texto.
-    - D) Es un programa de diseño gráfico.
-    - F) Ninguna
-
-19. **Si en las celdas C5, C6, C7 y C8 tienes los valores 100, 80, 90 y 54 respectivamente, y utilizas la fórmula `=SUM(C5:C8)`, ¿cuál sería el resultado?**
-    - A) 324
-    - B) -324
-    - C) Error en la fórmula
-    - D) No se pueden sumar valores negativos
-    - F) Ninguna
-
-20. **Si en la celda A1 tienes el valor 20 y en la celda A2 el valor 5, ¿cuál sería el resultado si usas la fórmula `=A1/A2`?**
-    - A) 4
-    - B) 5
-    - C) 25
-    - D) Error en la fórmula
-
-21. **¿Qué símbolo utilizas para empezar a escribir una fórmula en Excel?**
-    - A) =
-    - B) +
-    - C) -
-    - D) *
-
-22. **Si en la celda B1 tienes el número 10 y en B2 tienes el número 15, ¿cuál sería el resultado de la fórmula `=B1*B2`?**
-    - A) 150
-    - B) 25
-    - C) 5
-    - D) Error en la fórmula
-
-23. **Si tienes los valores 10, 20, 30 y 40 en las celdas A1, A2, A3 y A4 respectivamente, ¿qué resultado obtendrías al usar la fórmula `=AVERAGE(A1:A4)`?**
-    - A) 25
-    - B) 30
-    - C) 40
-    - D) 10
-
-24. **¿Qué operación realiza la fórmula `=A1^2` en Excel si el valor en A1 es 3?**
-    - A) Eleva el valor al cuadrado.
-    - B) Divide el valor entre 2.
-    - C) Duplica el valor.
-    - D) Muestra un error.
-
-25. **¿Cuál es la diferencia entre los operadores `>` y `<` en Excel?**
-    - A) `>` indica mayor que y `<` indica menor que.
-    - B) `<` indica mayor que y `>` indica menor que.
-    - C) Ambos significan igual a.
-    - D) Ninguno se utiliza en Excel.
-
-26. **¿Qué opción del menú de Excel usarías para guardar un documento por primera vez?**
-    - A) Archivo > Guardar como.
-    - B) Inicio > Guardar como.
-    - C) Archivo > Nuevo.
-    - D) Archivo > Exportar.
-
-27. **¿Qué pasos sigues para abrir un documento existente en Excel?**
-    - A) Archivo > Abrir > Seleccionar archivo.
-    - B) Inicio > Abrir > Seleccionar archivo.
-    - C) Archivo > Guardar > Seleccionar archivo.
-    - D) Archivo > Nuevo > Seleccionar archivo.
-
-28. **¿Qué hace la función `=SUM(A1:A10)`?**
-    - A) Suma los valores de las celdas A1 a A10.
-    - B) Resta los valores de las celdas A1 a A10.
-    - C) Divide los valores de las celdas A1 a A10.
-    - D) Encuentra el valor más alto en las celdas A1 a A10.
-
-29. **Si tienes los valores 50 en A1 y 30 en A2, ¿qué devuelve la fórmula `=IF(A1>A2, "Mayor", "Menor")`?**
-    - A) Mayor
-    - B) Menor
-    - C) Igual
-    - D) Error
-
-30. **¿Qué es Microsoft Excel y para qué se utiliza comúnmente en el entorno empresarial?**
-    - A) Es una hoja de cálculo que se utiliza para realizar análisis de datos, cálculos y representación gráfica, además de gestionar bases de datos y automatizar tareas.
-    - B) Es un software de edición de imágenes.
-    - C) Es una aplicación de procesamiento de texto.
-    - D) Es un programa de diseño gráfico.
-    - E) Ninguna de las anteriores.
+## Estructura del Proyecto
 
 
+mi-proyecto-ia/
+├── api/
+│ └── generate.js # Función Serverless Node.js que llama a Gemini
+├── .env # Archivo para guardar la API Key (¡NO SUBIR A GIT!)
+├── .gitignore # Especifica archivos a ignorar por Git
+├── index.html # Estructura HTML del frontend
+├── package.json # Define dependencias y scripts de Node.js
+├── README.md # Este archivo
+└── style.css # Estilos CSS para el frontend
+└── node_modules/ # Carpeta creada por npm install (ignorada por Git)
 
 
-# 🛍️ Ecommerce Demo 🛒
+## Prerrequisitos
 
-Este proyecto es una demostración de un ecommerce completamente funcional desarrollado con tecnologías web modernas. La aplicación simula la experiencia de compra de una tienda en línea, incluyendo la carga dinámica de productos desde una API pública, un carrito de compras interactivo, búsqueda en tiempo real y generación de factura en formato PDF a través de un formulario de pago simulado.
+Antes de comenzar, asegúrate de tener instalado:
 
-## 🌟 Características Principales 🚀
+*   [Node.js](https://nodejs.org/) (versión LTS recomendada) y npm (viene con Node.js).
+*   [Vercel CLI](https://vercel.com/docs/cli) (`npm install -g vercel`).
+*   Una [Google Gemini API Key](https://aistudio.google.com/).
+*   Git (opcional, pero recomendado para control de versiones).
 
-- **🎨 Diseño Responsivo y Semántico:** Utiliza HTML5, CSS3 y Bootstrap para ofrecer una experiencia de usuario óptima en dispositivos móviles, tablets y escritorios.
-- **📦 Carga Dinámica de Productos:** Se obtienen los productos de [FakeStore API](https://fakestoreapi.com/) y se generan tarjetas de producto de forma dinámica.
-- **🛒 Carrito de Compras Interactivo:** Permite agregar productos con cantidades personalizadas, actualizando en tiempo real la notificación del carrito.
-- **🔍 Búsqueda Dinámica:** Filtra productos por nombre o categoría mientras se escribe en el campo de búsqueda.
-- **💳 Pasarela de Pago Simulada:** Incluye un formulario para introducir datos de pago y utiliza la biblioteca `jsPDF` para generar una factura en formato PDF.
-- **✨ Buenas Prácticas de Desarrollo:** Código limpio, semántico, responsivo, optimizado para SEO/SEM y accesible (A11y).
+## Configuración Local
 
-## 🌐-Mira el proyecto aqui: https://juancitopena.github.io/ecommerce-demo/
+Sigue estos pasos para ejecutar el proyecto en tu máquina:
 
-## 💻 Tecnologías Utilizadas 🌐
+1.  **Clonar el Repositorio (si está en GitHub):**
+    ```bash
+    git clone <URL-del-repositorio>
+    cd <nombre-del-repositorio>
+    ```
+    **O si empiezas desde cero, crea la estructura y archivos** como se describe en la sección "Estructura del Proyecto".
 
-- **🌈 HTML5 & CSS3:** Estructuración y estilos semánticos y responsivos.
-- **📝 JavaScript:** Lógica de interacción y manipulación del DOM.
-- **🎳 Bootstrap:** Framework CSS para un diseño moderno y responsivo.
-- **🎨 Font Awesome:** Iconos vectoriales para mejorar la interfaz de usuario.
-- **📄 jsPDF:** Generación de facturas en formato PDF.
-- **🌐 FakeStore API:** Simulación de backend para la obtención de productos.
+2.  **Crear el archivo `.env`:**
+    En la raíz del proyecto, crea un archivo llamado `.env` y añade tu clave API de Google:
+    ```env
+    # .env
+    GOOGLE_API_KEY=TU_CLAVE_API_DE_GOOGLE_AQUI
+    ```
+    **Importante:** Reemplaza `TU_CLAVE_API_DE_GOOGLE_AQUI` con tu clave real. Asegúrate de que `.env` esté listado en tu archivo `.gitignore`.
 
-## 🚀 Cómo Ejecutar el Proyecto 🛠️
+3.  **Instalar Dependencias:**
+    Abre tu terminal en la raíz del proyecto y ejecuta:
+    ```bash
+    npm install
+    ```
+    Esto instalará `axios`, `cors` y `dotenv` listados en `package.json` (si no existe `package.json`, ejecúta `npm init -y` antes).
 
-1. **📥 Clona el repositorio o descarga los archivos:**
-   ```bash
-   git clone https://github.com/JUANCITOPENA/PRUEBA3.git
-   ```
+4.  **Iniciar el Servidor de Desarrollo:**
+    Ejecuta el comando de Vercel para desarrollo local:
+    ```bash
+    vercel dev
+    ```
+    *   **Nota:** La primera vez que ejecutes `vercel dev` en esta carpeta, te hará preguntas para vincular el proyecto a tu cuenta de Vercel. Responde afirmativamente para configurar (`Y`), elige tu scope, indica que no es un proyecto existente (`N`), dale un nombre en minúsculas (ej. `mi-proyecto-ia`), confirma el directorio (`.`) y acepta la configuración detectada (`N`). Esto solo ocurre una vez por carpeta.
 
-2. **🖥️ Abre la carpeta del proyecto en Visual Studio Code.**
+5.  **Abrir la Aplicación:**
+    `vercel dev` te dará una URL local (normalmente `http://localhost:3000`). Abre esa dirección en tu navegador web.
 
-3. **🌐 Instala la extensión "Live Server" para VS Code y haz clic derecho en el archivo `index.html` para abrirlo en el navegador.**
+6.  **Probar:**
+    Escribe una consulta en el área de texto y haz clic en "Enviar". Deberías ver la respuesta de la IA.
 
-4. **🎉 Disfruta del demo y prueba todas las funcionalidades:** 
-   - 🧭 Navegación
-   - 🔎 Búsqueda
-   - 🛒 Carrito
-   - 💸 Pasarela de pago
-   - 📋 Generación de factura en PDF
+7.  **Detener el Servidor:**
+    Vuelve al terminal y presiona `Ctrl + C`.
 
-## 🚢 Despliegue 🌍
+## Despliegue en Vercel
 
-El proyecto se puede desplegar fácilmente en servicios como GitHub Pages o Vercel siguiendo los pasos indicados en la documentación interna del repositorio.
+1.  **Configurar Variables de Entorno en Vercel:**
+    *   Ve al dashboard de tu proyecto en [vercel.com](https://vercel.com/).
+    *   Navega a Settings -> Environment Variables.
+    *   Añade una variable llamada `GOOGLE_API_KEY`.
+    *   Pega tu clave API de Google como valor.
+    *   Asegúrate de que esté disponible para los entornos de Production, Preview y Development.
+
+2.  **Desplegar:**
+    Desde tu terminal en la raíz del proyecto, ejecuta:
+    ```bash
+    # Despliega a una URL de preview
+    vercel
+
+    # Despliega directamente a producción
+    vercel --prod
+    ```
+    Vercel construirá y desplegará tu aplicación, proporcionando una URL pública.
+
+## Solución de Problemas Comunes
+
+*   **Error 404 al enviar consulta localmente:** Verifica que la estructura `api/generate.js` sea correcta (nombres en minúsculas) y reinicia `vercel dev`.
+*   **Errores 500, 400, 403:** Revisa la salida del terminal donde corre `vercel dev`. Usualmente indica problemas con la `GOOGLE_API_KEY` en `.env` o errores devueltos por la API de Gemini. Asegúrate de que la clave sea correcta y esté habilitada en Google Cloud/AI Studio.
+*   **La aplicación no carga en `localhost:3000`:** Asegúrate de que `vercel dev` se esté ejecutando activamente en el terminal.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abre un *issue* para discutir cambios mayores o un *pull request* para mejoras menores o correcciones de errores.
+
+## Licencia
+
+[MIT](LICENSE) *(O la licencia que prefieras. Si no tienes un archivo LICENSE, puedes omitir esta sección o elegir una licencia como MIT)*.
